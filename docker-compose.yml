@@ -1,0 +1,22 @@
+version: '3'
+services:
+  api-gateway:
+    build: ./api-gateway
+    ports:
+      - "8080:8080"
+  commit-tracker:
+    build: ./commit-tracker
+    ports:
+      - "8081:8081"
+  init:
+    build: ./init
+    ports:
+      - "8084:8084"
+  issue-tracker:
+    build: ./issue-tracker
+    ports:
+      - "8082:8082"
+  pullreq-tracker:
+    build: ./pullreq-tracker
+    ports:
+      - "8083:8083"

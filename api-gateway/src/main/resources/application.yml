@@ -1,0 +1,27 @@
+server:
+  port: 8080
+
+spring:
+  cloud:
+    compatibility-verifier:
+      enabled: false
+    gateway:
+      routes:
+        - id: init_route
+          uri: http://init:8084
+          predicates:
+            - Path=/init/**
+        - id: commit_route
+          uri: http://commit-tracker:8081
+          predicates:
+            - Path=/commit/**
+        - id: issue_route
+          uri: http://issue-tracker:8082
+          predicates:
+            - Path=/issue/**
+        - id: pull_request_route
+          uri: http://pullreq-tracker:8084
+          predicates:
+            - Path=/pullrequest/**
+
+

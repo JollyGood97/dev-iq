@@ -1,0 +1,7 @@
+server:
+  port: 8081
+
+cloud:
+  aws:
+    region:
+      static: us-east-1
