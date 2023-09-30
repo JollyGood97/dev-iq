@@ -27,7 +27,6 @@ public class GitHubMetricsServiceTest {
 
         String result = gitHubMetricsService.fetchCommitActivity("owner", "repo", "username", "2023-09-01");
 
-        // Verify that the fallback method was invoked
         assertEquals("{}", result);
     }
 }

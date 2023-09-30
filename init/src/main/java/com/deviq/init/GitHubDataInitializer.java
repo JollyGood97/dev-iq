@@ -30,20 +30,31 @@ public class GitHubDataInitializer {
     }
     private void fetchDataAndStore(String tableName, String fetchMethod, String storeMethod, String date) {
         try {
-            String data = (String) gitHubMetricsService.getClass().getMethod(fetchMethod, String.class, String.class, String.class, String.class)
-                    .invoke(gitHubMetricsService, "apache", "superset", "mistercrunch", date);
+            // Fetch all users of repo
+            String usersData = gitHubMetricsService.fetchUsers("apache", "superset");
+            JSONArray usersArray = new JSONArray(usersData);
 
-            if (data != null && !data.isEmpty()) {
-                JSONArray jsonArray = new JSONArray(data);
-                int count = jsonArray.length();
-                dynamoDBService.getClass().getMethod(storeMethod, String.class, int.class, String.class)
-                        .invoke(dynamoDBService, "mistercrunch", count, date);
-            } else {
-                System.out.println("No data found for table: " + tableName);
+            // Uses only the first 3 users for convenience of demonstration purposes of assignment
+            for (int i = 0; i < Math.min(3, usersArray.length()); i++) {
+                JSONObject user = usersArray.getJSONObject(i);
+                String username = user.getString("login");
+
+                String data = (String) gitHubMetricsService.getClass().getMethod(fetchMethod, String.class, String.class, String.class, String.class)
+                        .invoke(gitHubMetricsService, "apache", "superset", username, date);
+
+                if (data != null && !data.isEmpty()) {
+                    JSONArray jsonArray = new JSONArray(data);
+                    int count = jsonArray.length();
+                    dynamoDBService.getClass().getMethod(storeMethod, String.class, int.class, String.class)
+                            .invoke(dynamoDBService, username, count, date);
+                } else {
+                    System.out.println("No data found for user: " + username);
+                }
             }
         } catch (Exception e) {
             System.out.println("Error fetching data for table: " + tableName + ". Error: " + e.getMessage());
         }
     }
+
 
 }

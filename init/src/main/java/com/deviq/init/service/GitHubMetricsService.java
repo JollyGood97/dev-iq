@@ -23,6 +23,13 @@ public class GitHubMetricsService {
         return restTemplate.getForObject(url, String.class);
     }
 
+    @CircuitBreaker(name = "githubApi", fallbackMethod = "fallbackForUserFetch")
+    public String fetchUsers(String owner, String repo) {
+        String url = "https://api.github.com/repos/" + owner + "/" + repo + "/contributors";
+        return restTemplate.getForObject(url, String.class);
+    }
+
+
     @CircuitBreaker(name = "githubApi", fallbackMethod = "fallbackForFetchActivity")
     public String fetchPullRequestActivity(String owner, String repo, String username, String date) {
         String url = "https://api.github.com/repos/" + owner + "/" + repo + "/pulls?author=" + username + "&since=" + date;
@@ -40,5 +47,9 @@ public class GitHubMetricsService {
         return "{}";
     }
 
+    public String fallbackForUserFetch(String owner, String repo, Throwable t) {
+        logger.error("Error occurred while fetching users for repo: {}, owner: {}, Error: {}",  repo, owner, t.getMessage());
+        return "{}";
+    }
 
 }
