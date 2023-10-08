@@ -18,7 +18,6 @@ kind: Deployment
 metadata:
   name: commit-tracker-deployment
 spec:
-  replicas: 2
   selector:
     matchLabels:
       app: commit-tracker
@@ -43,3 +42,24 @@ spec:
                 secretKeyRef:
                   name: aws-credentials
                   key: aws_secret_access_key
+
+---
+
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: commit-tracker-hpa
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: commit-tracker-deployment
+  minReplicas: 1
+  maxReplicas: 3
+  metrics:
+    - type: Resource
+      resource:
+        name: cpu
+        target:
+          type: Utilization
+          averageUtilization: 70
