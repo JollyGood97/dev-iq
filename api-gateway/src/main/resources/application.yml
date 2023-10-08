@@ -20,7 +20,7 @@ spring:
           predicates:
             - Path=/issue/**
         - id: pull_request_route
-          uri: http://pullreq-tracker:8084
+          uri: http://pullreq-tracker:8083
           predicates:
             - Path=/pullrequest/**
 
