@@ -1,4 +1,4 @@
-apiVersion: batch/v1beta1
+apiVersion: batch/v1
 kind: CronJob
 metadata:
   name: init-cronjob
@@ -24,4 +24,4 @@ spec:
                     secretKeyRef:
                       name: aws-credentials
                       key: aws_secret_access_key
-          restartPolicy: OnFailure
+          activeDeadlineSeconds: 600

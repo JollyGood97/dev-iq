@@ -29,7 +29,7 @@ spec:
     spec:
       containers:
         - name: commit-tracker
-          image: 840684697633.dkr.ecr.us-east-1.amazonaws.com/dev-iq_init
+          image: 840684697633.dkr.ecr.us-east-1.amazonaws.com/dev-iq_commit-tracker:latest
           ports:
             - containerPort: 8081
           env:
