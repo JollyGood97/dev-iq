@@ -1,0 +1,27 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: init-cronjob
+spec:
+  schedule: "0 0 * * *"  # Midnight
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+            - name: init
+              image: 840684697633.dkr.ecr.us-east-1.amazonaws.com/dev-iq_init
+              ports:
+                - containerPort: 8084
+              env:
+                - name: AWS_ACCESS_KEY_ID
+                  valueFrom:
+                    secretKeyRef:
+                      name: aws-credentials
+                      key: aws_access_key_id
+                - name: AWS_SECRET_ACCESS_KEY
+                  valueFrom:
+                    secretKeyRef:
+                      name: aws-credentials
+                      key: aws_secret_access_key
+          activeDeadlineSeconds: 600
