@@ -1,0 +1,725 @@
+{
+  "version": "34.0.0",
+  "artifacts": {
+    "DevIqCdkStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "DevIqCdkStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "DevIqCdkStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://840684697633/us-east-1",
+      "properties": {
+        "templateFile": "DevIqCdkStack.template.json",
+        "terminationProtection": false,
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::840684697633:role/cdk-hnb659fds-deploy-role-840684697633-us-east-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::840684697633:role/cdk-hnb659fds-cfn-exec-role-840684697633-us-east-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-840684697633-us-east-1/a69f346eafa1b4fafb2900f84836cd1196e6c2baa9e979eab1245bb8a3709218.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "DevIqCdkStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::840684697633:role/cdk-hnb659fds-lookup-role-840684697633-us-east-1",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "DevIqCdkStack.assets"
+      ],
+      "metadata": {
+        "/DevIqCdkStack/CommitActivityTable": [
+          {
+            "type": "aws:cdk:hasPhysicalName",
+            "data": {
+              "Ref": "CommitActivityTableBB9BFB79"
+            }
+          }
+        ],
+        "/DevIqCdkStack/CommitActivityTable/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CommitActivityTableBB9BFB79"
+          }
+        ],
+        "/DevIqCdkStack/PullrequestActivityTable": [
+          {
+            "type": "aws:cdk:hasPhysicalName",
+            "data": {
+              "Ref": "PullrequestActivityTableC8CB0C29"
+            }
+          }
+        ],
+        "/DevIqCdkStack/PullrequestActivityTable/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PullrequestActivityTableC8CB0C29"
+          }
+        ],
+        "/DevIqCdkStack/IssueActivityTable": [
+          {
+            "type": "aws:cdk:hasPhysicalName",
+            "data": {
+              "Ref": "IssueActivityTable0A75F130"
+            }
+          }
+        ],
+        "/DevIqCdkStack/IssueActivityTable/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "IssueActivityTable0A75F130"
+          }
+        ],
+        "/DevIqCdkStack/MastersRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MastersRole0257C11B"
+          }
+        ],
+        "/DevIqCdkStack/kubectl/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "kubectl290BBFC9"
+          }
+        ],
+        "/DevIqCdkStack/DevIqEksCluster/DefaultVpc/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqEksClusterDefaultVpcD8E6A808"
+          }
+        ],
+        "/DevIqCdkStack/DevIqEksCluster/DefaultVpc/PublicSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqEksClusterDefaultVpcPublicSubnet1SubnetCFAF79C8"
+          }
+        ],
+        "/DevIqCdkStack/DevIqEksCluster/DefaultVpc/PublicSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqEksClusterDefaultVpcPublicSubnet1RouteTable88359133"
+          }
+        ],
+        "/DevIqCdkStack/DevIqEksCluster/DefaultVpc/PublicSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqEksClusterDefaultVpcPublicSubnet1RouteTableAssociation3A0416B4"
+          }
+        ],
+        "/DevIqCdkStack/DevIqEksCluster/DefaultVpc/PublicSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqEksClusterDefaultVpcPublicSubnet1DefaultRouteA4399A9B"
+          }
+        ],
+        "/DevIqCdkStack/DevIqEksCluster/DefaultVpc/PublicSubnet1/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqEksClusterDefaultVpcPublicSubnet1EIP09FCAF6A"
+          }
+        ],
+        "/DevIqCdkStack/DevIqEksCluster/DefaultVpc/PublicSubnet1/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqEksClusterDefaultVpcPublicSubnet1NATGatewayA2D7ED83"
+          }
+        ],
+        "/DevIqCdkStack/DevIqEksCluster/DefaultVpc/PublicSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqEksClusterDefaultVpcPublicSubnet2Subnet87D1CE42"
+          }
+        ],
+        "/DevIqCdkStack/DevIqEksCluster/DefaultVpc/PublicSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqEksClusterDefaultVpcPublicSubnet2RouteTable7228D851"
+          }
+        ],
+        "/DevIqCdkStack/DevIqEksCluster/DefaultVpc/PublicSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqEksClusterDefaultVpcPublicSubnet2RouteTableAssociation14743A87"
+          }
+        ],
+        "/DevIqCdkStack/DevIqEksCluster/DefaultVpc/PublicSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqEksClusterDefaultVpcPublicSubnet2DefaultRouteBFF45A25"
+          }
+        ],
+        "/DevIqCdkStack/DevIqEksCluster/DefaultVpc/PublicSubnet2/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqEksClusterDefaultVpcPublicSubnet2EIP2C8F49CB"
+          }
+        ],
+        "/DevIqCdkStack/DevIqEksCluster/DefaultVpc/PublicSubnet2/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqEksClusterDefaultVpcPublicSubnet2NATGateway10F7A475"
+          }
+        ],
+        "/DevIqCdkStack/DevIqEksCluster/DefaultVpc/PublicSubnet3/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqEksClusterDefaultVpcPublicSubnet3SubnetC3366DEE"
+          }
+        ],
+        "/DevIqCdkStack/DevIqEksCluster/DefaultVpc/PublicSubnet3/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqEksClusterDefaultVpcPublicSubnet3RouteTable19ACC294"
+          }
+        ],
+        "/DevIqCdkStack/DevIqEksCluster/DefaultVpc/PublicSubnet3/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqEksClusterDefaultVpcPublicSubnet3RouteTableAssociationF2002AD2"
+          }
+        ],
+        "/DevIqCdkStack/DevIqEksCluster/DefaultVpc/PublicSubnet3/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqEksClusterDefaultVpcPublicSubnet3DefaultRouteF185235E"
+          }
+        ],
+        "/DevIqCdkStack/DevIqEksCluster/DefaultVpc/PublicSubnet3/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqEksClusterDefaultVpcPublicSubnet3EIP20042ABD"
+          }
+        ],
+        "/DevIqCdkStack/DevIqEksCluster/DefaultVpc/PublicSubnet3/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqEksClusterDefaultVpcPublicSubnet3NATGateway6A75B93F"
+          }
+        ],
+        "/DevIqCdkStack/DevIqEksCluster/DefaultVpc/PrivateSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqEksClusterDefaultVpcPrivateSubnet1Subnet13D58411"
+          }
+        ],
+        "/DevIqCdkStack/DevIqEksCluster/DefaultVpc/PrivateSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqEksClusterDefaultVpcPrivateSubnet1RouteTable9FDD4CAE"
+          }
+        ],
+        "/DevIqCdkStack/DevIqEksCluster/DefaultVpc/PrivateSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqEksClusterDefaultVpcPrivateSubnet1RouteTableAssociation88D68619"
+          }
+        ],
+        "/DevIqCdkStack/DevIqEksCluster/DefaultVpc/PrivateSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqEksClusterDefaultVpcPrivateSubnet1DefaultRouteF1A81118"
+          }
+        ],
+        "/DevIqCdkStack/DevIqEksCluster/DefaultVpc/PrivateSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqEksClusterDefaultVpcPrivateSubnet2SubnetB434BE9E"
+          }
+        ],
+        "/DevIqCdkStack/DevIqEksCluster/DefaultVpc/PrivateSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqEksClusterDefaultVpcPrivateSubnet2RouteTableD8C53B1C"
+          }
+        ],
+        "/DevIqCdkStack/DevIqEksCluster/DefaultVpc/PrivateSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqEksClusterDefaultVpcPrivateSubnet2RouteTableAssociation33FF18F9"
+          }
+        ],
+        "/DevIqCdkStack/DevIqEksCluster/DefaultVpc/PrivateSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqEksClusterDefaultVpcPrivateSubnet2DefaultRoute2AB98A90"
+          }
+        ],
+        "/DevIqCdkStack/DevIqEksCluster/DefaultVpc/PrivateSubnet3/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqEksClusterDefaultVpcPrivateSubnet3Subnet21E6A5D6"
+          }
+        ],
+        "/DevIqCdkStack/DevIqEksCluster/DefaultVpc/PrivateSubnet3/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqEksClusterDefaultVpcPrivateSubnet3RouteTable49BE57CD"
+          }
+        ],
+        "/DevIqCdkStack/DevIqEksCluster/DefaultVpc/PrivateSubnet3/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqEksClusterDefaultVpcPrivateSubnet3RouteTableAssociation3D86E8D3"
+          }
+        ],
+        "/DevIqCdkStack/DevIqEksCluster/DefaultVpc/PrivateSubnet3/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqEksClusterDefaultVpcPrivateSubnet3DefaultRoute89E1909E"
+          }
+        ],
+        "/DevIqCdkStack/DevIqEksCluster/DefaultVpc/IGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqEksClusterDefaultVpcIGWA3BC7602"
+          }
+        ],
+        "/DevIqCdkStack/DevIqEksCluster/DefaultVpc/VPCGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqEksClusterDefaultVpcVPCGW22F7F87B"
+          }
+        ],
+        "/DevIqCdkStack/DevIqEksCluster/DefaultVpc/RestrictDefaultSecurityGroupCustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqEksClusterDefaultVpcRestrictDefaultSecurityGroupCustomResourceBF7ED994"
+          }
+        ],
+        "/DevIqCdkStack/DevIqEksCluster/KubectlHandlerRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqEksClusterKubectlHandlerRoleAF5098AD"
+          }
+        ],
+        "/DevIqCdkStack/DevIqEksCluster/KubectlHandlerRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqEksClusterKubectlHandlerRoleDefaultPolicyBA98D17E"
+          }
+        ],
+        "/DevIqCdkStack/DevIqEksCluster/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqEksClusterRole1A0E0E2A"
+          }
+        ],
+        "/DevIqCdkStack/DevIqEksCluster/ControlPlaneSecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqEksClusterControlPlaneSecurityGroupADF6E35A"
+          }
+        ],
+        "/DevIqCdkStack/DevIqEksCluster/Resource/CreationRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqEksClusterCreationRole7DA70A2E"
+          }
+        ],
+        "/DevIqCdkStack/DevIqEksCluster/Resource/CreationRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqEksClusterCreationRoleDefaultPolicyC91CECFA"
+          }
+        ],
+        "/DevIqCdkStack/DevIqEksCluster/Resource/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqEksClusterA02F3528"
+          }
+        ],
+        "/DevIqCdkStack/DevIqEksCluster/KubectlReadyBarrier": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqEksClusterKubectlReadyBarrier7E86E87A"
+          }
+        ],
+        "/DevIqCdkStack/DevIqEksCluster/HasEcrPublic": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqEksClusterHasEcrPublic57B1943F"
+          }
+        ],
+        "/DevIqCdkStack/DevIqEksCluster/AwsAuth/manifest/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqEksClusterAwsAuthmanifestD2E70A64"
+          }
+        ],
+        "/DevIqCdkStack/DevIqEksCluster/OpenIdConnectProvider/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqEksClusterOpenIdConnectProviderD93603C9"
+          }
+        ],
+        "/DevIqCdkStack/DevIqEksCluster/ConfigCommand": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqEksClusterConfigCommand3E4961DB"
+          }
+        ],
+        "/DevIqCdkStack/DevIqEksCluster/GetTokenCommand": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqEksClusterGetTokenCommand90DB2E7E"
+          }
+        ],
+        "/DevIqCdkStack/DevIqEksCluster/CoreDnsComputeTypePatch/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqEksClusterCoreDnsComputeTypePatch6A0A2F47"
+          }
+        ],
+        "/DevIqCdkStack/DevIqEksCluster/fargate-profile-default/PodExecutionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqEksClusterfargateprofiledefaultPodExecutionRoleB22B6F3D"
+          }
+        ],
+        "/DevIqCdkStack/DevIqEksCluster/fargate-profile-default/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqEksClusterfargateprofiledefault14572D7C"
+          }
+        ],
+        "/DevIqCdkStack/DevIqEksCluster/fargate-profile-DevIqFargateProfile/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqEksClusterfargateprofileDevIqFargateProfileF6CC2CDF"
+          }
+        ],
+        "/DevIqCdkStack/Custom::VpcRestrictDefaultSGCustomResourceProvider/Role": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomVpcRestrictDefaultSGCustomResourceProviderRole26592FE0"
+          }
+        ],
+        "/DevIqCdkStack/Custom::VpcRestrictDefaultSGCustomResourceProvider/Handler": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomVpcRestrictDefaultSGCustomResourceProviderHandlerDC833E5E"
+          }
+        ],
+        "/DevIqCdkStack/@aws-cdk--aws-eks.ClusterResourceProvider/NodeProxyAgentLayer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NodeProxyAgentLayer924C1971"
+          }
+        ],
+        "/DevIqCdkStack/@aws-cdk--aws-eks.ClusterResourceProvider/OnEventHandler/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OnEventHandlerServiceRole15A26729"
+          }
+        ],
+        "/DevIqCdkStack/@aws-cdk--aws-eks.ClusterResourceProvider/OnEventHandler/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OnEventHandler42BEBAE0"
+          }
+        ],
+        "/DevIqCdkStack/@aws-cdk--aws-eks.ClusterResourceProvider/IsCompleteHandler/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "IsCompleteHandlerServiceRole5810CC58"
+          }
+        ],
+        "/DevIqCdkStack/@aws-cdk--aws-eks.ClusterResourceProvider/IsCompleteHandler/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "IsCompleteHandler7073F4DA"
+          }
+        ],
+        "/DevIqCdkStack/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onEvent/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProviderframeworkonEventServiceRole9FF04296"
+          }
+        ],
+        "/DevIqCdkStack/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onEvent/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProviderframeworkonEventServiceRoleDefaultPolicy48CD2133"
+          }
+        ],
+        "/DevIqCdkStack/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onEvent/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProviderframeworkonEvent83C1D0A7"
+          }
+        ],
+        "/DevIqCdkStack/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-isComplete/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProviderframeworkisCompleteServiceRoleB1087139"
+          }
+        ],
+        "/DevIqCdkStack/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-isComplete/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProviderframeworkisCompleteServiceRoleDefaultPolicy2E7140AC"
+          }
+        ],
+        "/DevIqCdkStack/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-isComplete/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProviderframeworkisComplete26D7B0CB"
+          }
+        ],
+        "/DevIqCdkStack/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onTimeout/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProviderframeworkonTimeoutServiceRole28643D26"
+          }
+        ],
+        "/DevIqCdkStack/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onTimeout/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProviderframeworkonTimeoutServiceRoleDefaultPolicy2688969F"
+          }
+        ],
+        "/DevIqCdkStack/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onTimeout/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProviderframeworkonTimeout0B47CA38"
+          }
+        ],
+        "/DevIqCdkStack/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/waiter-state-machine/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProviderwaiterstatemachineRole0C7159F9"
+          }
+        ],
+        "/DevIqCdkStack/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/waiter-state-machine/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProviderwaiterstatemachineRoleDefaultPolicyD3C3DA1A"
+          }
+        ],
+        "/DevIqCdkStack/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/waiter-state-machine/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Providerwaiterstatemachine5D4A9DF0"
+          }
+        ],
+        "/DevIqCdkStack/@aws-cdk--aws-eks.ClusterResourceProvider/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/DevIqCdkStack/@aws-cdk--aws-eks.ClusterResourceProvider/DevIqCdkStackawscdkawseksClusterResourceProviderOnEventHandlerServiceRoleC6F29611Arn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqCdkStackawscdkawseksClusterResourceProviderOnEventHandlerServiceRoleC6F29611Arn"
+          }
+        ],
+        "/DevIqCdkStack/@aws-cdk--aws-eks.ClusterResourceProvider/DevIqCdkStackawscdkawseksClusterResourceProviderIsCompleteHandlerServiceRole17E713E9Arn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqCdkStackawscdkawseksClusterResourceProviderIsCompleteHandlerServiceRole17E713E9Arn"
+          }
+        ],
+        "/DevIqCdkStack/@aws-cdk--aws-eks.ClusterResourceProvider/DevIqCdkStackawscdkawseksClusterResourceProviderframeworkonEvent66F9610AArn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqCdkStackawscdkawseksClusterResourceProviderframeworkonEvent66F9610AArn"
+          }
+        ],
+        "/DevIqCdkStack/@aws-cdk--aws-eks.ClusterResourceProvider.NestedStack/@aws-cdk--aws-eks.ClusterResourceProvider.NestedStackResource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "awscdkawseksClusterResourceProviderNestedStackawscdkawseksClusterResourceProviderNestedStackResource9827C454"
+          }
+        ],
+        "/DevIqCdkStack/@aws-cdk--aws-eks.KubectlProvider/Handler/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Handler886CB40B"
+          }
+        ],
+        "/DevIqCdkStack/@aws-cdk--aws-eks.KubectlProvider/AwsCliLayer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AwsCliLayerF44AAF94"
+          }
+        ],
+        "/DevIqCdkStack/@aws-cdk--aws-eks.KubectlProvider/Provider/framework-onEvent/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProviderframeworkonEventServiceRole9FF04296"
+          }
+        ],
+        "/DevIqCdkStack/@aws-cdk--aws-eks.KubectlProvider/Provider/framework-onEvent/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProviderframeworkonEventServiceRoleDefaultPolicy48CD2133"
+          }
+        ],
+        "/DevIqCdkStack/@aws-cdk--aws-eks.KubectlProvider/Provider/framework-onEvent/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProviderframeworkonEvent83C1D0A7"
+          }
+        ],
+        "/DevIqCdkStack/@aws-cdk--aws-eks.KubectlProvider/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/DevIqCdkStack/@aws-cdk--aws-eks.KubectlProvider/DevIqCdkStackawscdkawseksKubectlProviderframeworkonEvent4BC77D76Arn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqCdkStackawscdkawseksKubectlProviderframeworkonEvent4BC77D76Arn"
+          }
+        ],
+        "/DevIqCdkStack/@aws-cdk--aws-eks.KubectlProvider/reference-to-DevIqCdkStackkubectl022A630DRef": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoDevIqCdkStackkubectl022A630DRef"
+          }
+        ],
+        "/DevIqCdkStack/@aws-cdk--aws-eks.KubectlProvider/reference-to-DevIqCdkStackDevIqEksClusterKubectlHandlerRoleE072D59EArn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoDevIqCdkStackDevIqEksClusterKubectlHandlerRoleE072D59EArn"
+          }
+        ],
+        "/DevIqCdkStack/@aws-cdk--aws-eks.KubectlProvider/reference-to-DevIqCdkStackDevIqEksClusterDefaultVpcPrivateSubnet1Subnet3EB07654Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoDevIqCdkStackDevIqEksClusterDefaultVpcPrivateSubnet1Subnet3EB07654Ref"
+          }
+        ],
+        "/DevIqCdkStack/@aws-cdk--aws-eks.KubectlProvider/reference-to-DevIqCdkStackDevIqEksClusterDefaultVpcPrivateSubnet2Subnet7FBB0283Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoDevIqCdkStackDevIqEksClusterDefaultVpcPrivateSubnet2Subnet7FBB0283Ref"
+          }
+        ],
+        "/DevIqCdkStack/@aws-cdk--aws-eks.KubectlProvider/reference-to-DevIqCdkStackDevIqEksClusterDefaultVpcPrivateSubnet3Subnet0FA7F826Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoDevIqCdkStackDevIqEksClusterDefaultVpcPrivateSubnet3Subnet0FA7F826Ref"
+          }
+        ],
+        "/DevIqCdkStack/@aws-cdk--aws-eks.KubectlProvider/reference-to-DevIqCdkStackDevIqEksCluster960622DCClusterSecurityGroupId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoDevIqCdkStackDevIqEksCluster960622DCClusterSecurityGroupId"
+          }
+        ],
+        "/DevIqCdkStack/@aws-cdk--aws-eks.KubectlProvider.NestedStack/@aws-cdk--aws-eks.KubectlProvider.NestedStackResource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "awscdkawseksKubectlProviderNestedStackawscdkawseksKubectlProviderNestedStackResourceA7AEBA6B"
+          }
+        ],
+        "/DevIqCdkStack/DevIqCdkStackDevIqEksCluster3340DFEF-AlbController/alb-sa/ConditionJson/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqCdkStackDevIqEksCluster3340DFEFAlbControlleralbsaConditionJsonC46A815E"
+          }
+        ],
+        "/DevIqCdkStack/DevIqCdkStackDevIqEksCluster3340DFEF-AlbController/alb-sa/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqCdkStackDevIqEksCluster3340DFEFAlbControlleralbsaRole4F6A9BC7"
+          }
+        ],
+        "/DevIqCdkStack/DevIqCdkStackDevIqEksCluster3340DFEF-AlbController/alb-sa/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqCdkStackDevIqEksCluster3340DFEFAlbControlleralbsaRoleDefaultPolicyE9227AC1"
+          }
+        ],
+        "/DevIqCdkStack/DevIqCdkStackDevIqEksCluster3340DFEF-AlbController/alb-sa/manifest-alb-saServiceAccountResource/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqCdkStackDevIqEksCluster3340DFEFAlbControlleralbsamanifestalbsaServiceAccountResourceF72EABE3"
+          }
+        ],
+        "/DevIqCdkStack/DevIqCdkStackDevIqEksCluster3340DFEF-AlbController/Resource/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DevIqCdkStackDevIqEksCluster3340DFEFAlbController51A3EC39"
+          }
+        ],
+        "/DevIqCdkStack/Custom::AWSCDKOpenIdConnectProviderCustomResourceProvider/Role": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomAWSCDKOpenIdConnectProviderCustomResourceProviderRole517FED65"
+          }
+        ],
+        "/DevIqCdkStack/Custom::AWSCDKOpenIdConnectProviderCustomResourceProvider/Handler": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomAWSCDKOpenIdConnectProviderCustomResourceProviderHandlerF2C543E0"
+          }
+        ],
+        "/DevIqCdkStack/AWSCDKCfnUtilsProviderCustomResourceProvider/Role": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AWSCDKCfnUtilsProviderCustomResourceProviderRoleFE0EE867"
+          }
+        ],
+        "/DevIqCdkStack/AWSCDKCfnUtilsProviderCustomResourceProvider/Handler": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AWSCDKCfnUtilsProviderCustomResourceProviderHandlerCF82AA57"
+          }
+        ],
+        "/DevIqCdkStack/FargateEKSRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FargateEKSRole4C14EFE9"
+          }
+        ],
+        "/DevIqCdkStack/FargateEKSRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FargateEKSRoleDefaultPolicy86AE4F2B"
+          }
+        ],
+        "/DevIqCdkStack/Manifests/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Manifests6831C0C3"
+          }
+        ],
+        "/DevIqCdkStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/DevIqCdkStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/DevIqCdkStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "DevIqCdkStack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}
